@@ -1,0 +1,27 @@
+{
+  "name": "vue3-ssr-blueprint",
+  "version": "1.0.0",
+	"workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "rimraf **/node_modules",
+    "lint": "eslint --fix .",
+    "build": "cross-env npm run build -w ./packages/app",
+    "start": "cross-env npm run start -w ./packages/app",
+    "start:production": "cross-env NODE_ENV=production SHOW_BUNDLE_ANALYZER_CLIENT=false SHOW_BUNDLE_ANALYZER_SERVER=false npm run start:production -w ./packages/app"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "rimraf": "^3.0.2"
+  }
+}

@@ -1,0 +1,12 @@
+# vscode
+.history
+
+# node
+node_modules
+
+# build artifacts
+dist
+reports
+
+# lerna
+lerna-debug.log
